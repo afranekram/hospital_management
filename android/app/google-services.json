@@ -1,40 +1,21 @@
 {
   "project_info": {
-    "project_number": "193948479448",
-    "project_id": "health-964c9",
-    "storage_bucket": "health-964c9.firebasestorage.app"
+    "project_number": "740718701792",
+    "project_id": "hospital-management-ce14d",
+    "storage_bucket": "hospital-management-ce14d.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:193948479448:android:b04ac14d08768793f08cad",
+        "mobilesdk_app_id": "1:740718701792:android:d6c33f034f1caade96f485",
         "android_client_info": {
-          "package_name": "com.example.hospital_management_app"
+          "package_name": "com.ekram.hospitalmanagement"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyB9Qq4SmDTVLGdfaJgEmPqaoS3SFMeRCsk"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:193948479448:android:d87fb18039dd90aef08cad",
-        "android_client_info": {
-          "package_name": "com.soumitro.hospitalmanagement"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyB9Qq4SmDTVLGdfaJgEmPqaoS3SFMeRCsk"
+          "current_key": "AIzaSyCuaqPWrfBrNFOK2wtHuwGlk7n16rPKgNo"
         }
       ],
       "services": {

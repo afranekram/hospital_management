@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.soumitro.hospitalmanagement"
+    namespace = "com.ekram.hospitalmanagement"
     compileSdk = 36 // Updated to match plugin requirements
     ndkVersion = "27.0.12077973"
 
@@ -20,7 +20,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.soumitro.hospitalmanagement"
+        applicationId = "com.ekram.hospitalmanagement"
         minSdk = flutter.minSdkVersion  // Updated for better Firebase compatibility
         targetSdk = 36
         versionCode = 1

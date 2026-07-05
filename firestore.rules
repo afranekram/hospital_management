@@ -1,51 +1,8 @@
 rules_version = '2';
-
 service cloud.firestore {
   match /databases/{database}/documents {
-    
-    // Helper function to check if user is authenticated
-    function isAuthenticated() {
-      return request.auth != null;
+    match /{document=**} {
+      allow read, write: if request.auth != null;
     }
-    
-    // Helper function to check if user owns the document
-    function isOwner(userId) {
-      return isAuthenticated() && request.auth.uid == userId;
-    }
-    
-    // Users collection - stores basic user info and type
-    match /users/{userId} {
-      // Allow users to read their own document
-      allow read: if isOwner(userId);
-      
-      // Allow users to create their own document during registration
-      allow create: if isOwner(userId);
-      
-      // Allow users to update their own document
-      allow update: if isOwner(userId);
-      
-      // Allow users to delete their own document
-      allow delete: if isOwner(userId);
-    }
-    
-    // Patients collection - stores patient medical records
-    match /patients/{patientId} {
-      // Allow patients to read their own medical records
-      allow read: if isOwner(patientId);
-      
-      // Allow users to create their patient profile during registration
-      rules_version = '2';
-
-      service cloud.firestore {
-        match /databases/{database}/documents {
-          match /doctors/{docId} {
-            allow read: if request.auth != null;
-            allow write: if false; // restrict writes to admin only
-          }
-          match /users/{userId} {
-            allow read: if request.auth != null;
-          }
-          // Adjust appointments access as needed for your app
-        }
-      }
-      // Allow doctors to read their own profile
+  }
+}

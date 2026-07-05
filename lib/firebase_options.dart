@@ -51,22 +51,20 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBAbOr12xbe3as-IU_6n72cxI_e2emrqws',
-    appId: '1:178733000509:android:0c605e6a4a516284b74754',
-    messagingSenderId: '178733000509',
-    projectId: 'hospital-management-app-886db',
-    storageBucket: 'hospital-management-app-886db.firebasestorage.app',
+    apiKey: 'AIzaSyCuaqPWrfBrNFOK2wtHuwGlk7n16rPKgNo',
+    appId: '1:740718701792:android:d6c33f034f1caade96f485',
+    messagingSenderId: '740718701792',
+    projectId: 'hospital-management-ce14d',
+    storageBucket: 'hospital-management-ce14d.firebasestorage.app',
   );
-
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyAqU6AcTPfIDSe0AWpoXP4oQqUB_6x2MZg',
-    appId: '1:178733000509:ios:8732d909ae70c39db74754',
-    messagingSenderId: '178733000509',
-    projectId: 'hospital-management-app-886db',
-    storageBucket: 'hospital-management-app-886db.firebasestorage.app',
-    iosBundleId: 'com.example.hospitalManagementApp',
+    apiKey: 'AIzaSyAnG-BtSDES4018VL9vOwz-_0ZDSXM1zug',
+    appId: '1:740718701792:ios:19886825b9409bde96f485',
+    messagingSenderId: '740718701792',
+    projectId: 'hospital-management-ce14d',
+    storageBucket: 'hospital-management-ce14d.firebasestorage.app',
+    iosBundleId: 'com.ekram.hospitalmanagement',
   );
-
   static const FirebaseOptions macos = FirebaseOptions(
     apiKey: 'AIzaSyAqU6AcTPfIDSe0AWpoXP4oQqUB_6x2MZg',
     appId: '1:178733000509:ios:8732d909ae70c39db74754',
@@ -77,12 +75,11 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyAhJ6q2PHxOJ4yn2GFs7Dv5Xwc0RtXdZPg',
-    appId: '1:178733000509:web:6500a7082e30506ab74754',
-    messagingSenderId: '178733000509',
-    projectId: 'hospital-management-app-886db',
-    authDomain: 'hospital-management-app-886db.firebaseapp.com',
-    storageBucket: 'hospital-management-app-886db.firebasestorage.app',
-    measurementId: 'G-LH0NJ6QC21',
+    apiKey: 'AIzaSyA-mCYSmc8Dy4OgzGXKNqJeGodkdPpwv28',
+    appId: '1:740718701792:web:21120ae10bd664a096f485',
+    messagingSenderId: '740718701792',
+    projectId: 'hospital-management-ce14d',
+    authDomain: 'hospital-management-ce14d.firebaseapp.com',
+    storageBucket: 'hospital-management-ce14d.firebasestorage.app',
   );
 }

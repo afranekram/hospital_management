@@ -8,7 +8,7 @@ import 'package:hospital_management_app/services/auth_service.dart';
 import 'package:hospital_management_app/services/database_service.dart';
 import 'package:intl/intl.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:firebase_storage/firebase_storage.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 import 'dart:io';
 import 'package:cached_network_image/cached_network_image.dart';
 
@@ -1356,13 +1356,15 @@ class _PatientProfileState extends State<PatientProfile>
 
       // Upload image if changed
       if (_imageFile != null) {
-        final ref = FirebaseStorage.instance
-            .ref()
-            .child('profile_images')
-            .child('${_patient!.id}.jpg');
-
-        await ref.putFile(_imageFile!);
-        profileImageUrl = await ref.getDownloadURL();
+        final supabase = Supabase.instance.client;
+        await supabase.storage.from('profile_images').upload(
+          '${_patient!.id}.jpg',
+          _imageFile!,
+          fileOptions: const FileOptions(upsert: true),
+        );
+        profileImageUrl = supabase.storage
+            .from('profile_images')
+            .getPublicUrl('${_patient!.id}.jpg');
       }
 
       // Update patient data

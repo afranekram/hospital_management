@@ -39,6 +39,14 @@ app.*.symbols
 # Obfuscation related
 app.*.map.json
 
+# Node.js dependencies
+node_modules/
+package-lock.json
+
+# Environment files
+.env*
+.env
+
 # Android Studio will place build artifacts here
 /android/app/debug
 /android/app/profile

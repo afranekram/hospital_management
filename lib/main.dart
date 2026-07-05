@@ -3,6 +3,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:provider/provider.dart';
+import 'package:supabase_flutter/supabase_flutter.dart' hide User;
+import 'package:hospital_management_app/firebase_options.dart';
 import 'package:hospital_management_app/services/auth_service.dart';
 import 'package:hospital_management_app/screens/auth/login_screen.dart';
 import 'package:hospital_management_app/screens/patient/patient_dashboard.dart';
@@ -13,7 +15,9 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   try {
-    await Firebase.initializeApp();
+    await Firebase.initializeApp(
+      options: DefaultFirebaseOptions.currentPlatform,
+    );
 
     // Configure Firestore
     FirebaseFirestore.instance.settings = const Settings(
@@ -25,6 +29,11 @@ void main() async {
   } catch (e) {
     debugPrint('Firebase initialization error: $e');
   }
+
+  await Supabase.initialize(
+    url: 'https://kiknwldeqzxrzkrvxgdn.supabase.co',
+    publishableKey: 'sb_publishable_hnlfAdvMdsFLGa-OLvqf3A_u3pNdQzA',
+  );
 
   runApp(const MyApp());
 }

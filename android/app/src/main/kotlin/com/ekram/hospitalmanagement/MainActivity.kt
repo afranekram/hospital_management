@@ -1,4 +1,4 @@
-package com.soumitro.hospitalmanagement
+package com.ekram.hospitalmanagement
 
 import io.flutter.embedding.android.FlutterActivity
 
